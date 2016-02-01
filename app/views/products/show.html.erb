@@ -1,7 +1,7 @@
 <h1>Product Display Page</h1>
 
 <div>
-  <%= "#{@product.name}, #{@product.description},
+  <%= "#{@product.name}, #{@product.description},``
        Price: #{@product.formatted_price}" %>
         <%= link_to "Edit product", edit_product_path(@product.id) %>
         <%= link_to "Delete product", product_path(@product.id),
