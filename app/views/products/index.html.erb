@@ -1,7 +1,15 @@
 <h1>Products Main Page</h1>
 
 <div>
-<% Product.each do |product| %>
-  <%= "#{product.name}, Price: #{product.formatted_price}" %>
+<% @products.each do |product| %>
+  <%= "#{product.name}, #{product.description},
+      Price: #{product.formatted_price}" %>
+  <%= link_to "Select", product_path(product.id) %>
+  <br>
 <% end %>
+</div>
+<br>
+<div>
+<%= link_to "Add new product", new_product_path %>
+
 </div>
